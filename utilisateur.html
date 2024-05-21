@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+    
+        body{
+            background-image: url(Al-Omrane1.jpg);
+            background-size: cover;
+            margin: 0 auto;
+             padding: 20px;
+        }
+        form{
+            width:  600px;
+      height: 600px;
+      margin: 0 auto;/*  pour centrer au milieu page*/
+      padding: 60px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      margin-top: 100px;
+      box-shadow: 0 0 30px rgb(86, 70, 224);
+        }
+        h3{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p2{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p3{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p4{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p5{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p6{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p7{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #p8{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #d1{
+            font-size: 25px;
+            
+        }
+        #d2{
+            font-size: 25px;
+            
+        }
+        #d3{
+            font-size: 25px;
+            
+        }
+        #d4{
+            font-size: 25px;
+            
+        }
+        #d5{
+            font-size: 25px;
+            
+        }
+        #d6{
+            font-size: 25px;
+            
+        }
+        #d7{
+            font-size: 25px;
+            
+        }
+        #d8{
+            font-size: 25px;
+            
+        }
+        #butt{
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #0b19b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-left: 200px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du parc informatique</title>
+   <script src="utilisateur.js"></script>
+</head>
+<body>
+   
+  <form     action="pageprincipal.html">
+    <h3>Formulaire d'inscription des utilisateurs du parc informatique</h3> 
+    <p id="p1">
+        Nom :
+        <input type="text" required id="d1">
+    </p>
+    <p id="p2">
+        Prénom :
+        <input type="text" required  id="d2">
+    </p>
+    <p id="p3">
+        Numéro d'inventaire :
+        <input type="number" required id="d3">
+    </p>
+    <p id="p4">
+        Numéro de téléphone:
+        <input type="number" required id="d4">
+    </p>
+    <p id="p5">
+        Matricule :
+        <input type="number" required id="d5">
+    </p>
+    <p id="p6">
+        Adresse E-mail :
+        <input type="email" required id="d6">
+    </p>
+    <p id="p7">
+        Date d'entrée en service :
+        <input type="date" required id="d7">
+    </p>
+    <p id="p8">
+        Remarques ou commentaires :
+        <input type="text" id="d8">
+        <br><br>
+        <button type="submit" id="butt" onclick="afficher()" >Soumettre</button>
+    </p>
+
+  </form>
+ 
+</body>
+</html>

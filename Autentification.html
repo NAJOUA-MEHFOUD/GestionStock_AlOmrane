@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du parc informatique </title>
+    <style>
+        img {
+            width: 200px;
+            height: 100px;
+          background-size: cover;
+        }
+        body{
+            background-image: url(Al-Omrane1.jpg);
+            font-family: Arial, sans-serif;
+            background-size: cover;
+    
+            
+        }
+       
+        
+        .container {
+      width: 400px;
+      height: 500px;
+      margin: 0 auto;/*  pour centrer au milieu page*/
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      margin-top: 200px;
+      box-shadow: 0 0 30px rgb(8, 30, 231);
+    }
+    
+
+
+
+    
+    #nom{
+        font-size: 25px;
+    }
+    #password{
+        font-size: 25px;
+    }
+    #p1{
+font-weight: bold;
+font-size: 20px;
+    }
+    #p2{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    h2{
+        text-decoration: none;
+  padding: 10px 20px;
+  background-color: #091dd3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+    }
+    #titre{
+        color: white;
+    }
+    #button{
+        text-decoration: none;
+  padding: 10px 20px;
+  background-color: #091dd3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 130px;
+    }
+    #button{
+        color: white;
+    }
+    .motpasseoublié{
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+
+
+    
+
+
+        
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h2 id="titre">Authentification</h2><br>
+    <form action="pageprincipal.html" >
+        <p id="p1">
+            Nom d'utilisateur :
+            <input type="text" name="nom d'utilisateur" id="nom" required  placeholder="Entrer l'utilisateur"> 
+        </p>
+        <p id="p2">
+            mot de passe :
+            <input type="password" name="mot passe" id="password" required placeholder="Entrer le mot de passe"> 
+        </p><br>
+     <input type="submit" id="button" value="se connecter" >
+   
+    <br><br>
+
+    <div class="motpasseoublié">
+        <a href="motdepasseoublié.html"  >mot passe oublié ?</a>
+        <a href="pageprincipal.html"></a>
+    </div>
+</form>
+</div>
+</body>
+</html>

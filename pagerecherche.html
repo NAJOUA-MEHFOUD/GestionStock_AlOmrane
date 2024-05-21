@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche</title>
+</head>
+<body>
+    <style>
+        body{
+           font-family: Arial, sans-serif;
+           margin: 0 auto;
+           padding: 20px;
+           background-image: url(Al-Omrane1.jpg);
+           background-size: cover;}
+           h2{
+               font-size: 20px;
+           font-weight: bold;
+           text-align: center;
+          
+           }
+       table {
+           width: 100%;
+           border-collapse: collapse;
+       }
+       th, td {
+           padding: 10px;
+           text-align: left;
+           border: 1px solid #ccc;
+       }
+       th {
+           background-color: #f2f2f2;
+           font-weight: bold;
+       }
+       form{
+        width: 600px;
+            height: 100px;
+            margin: 0 auto; /* pour centrer au milieu de la page */
+            padding: 60px;
+            background-color: rgba(224, 221, 235, 0.8);
+            border-radius: 5px;
+            margin-top: 100px;
+            box-shadow: 0 0 30px rgb(240, 241, 243);
+       }
+       #rech{
+        
+       }
+
+   </style>
+
+    <form >
+    <h2>Recherche d'équipements</h2> 
+        <p>
+            Numéro-d'inventaire :
+            <input type="number" id="searchNum">
+        </p>
+        <p>
+            Marque :
+            <select id="searchMarque">
+                <option value="">Toutes les marques</option>
+                <option value="HP">HP</option>
+                <option value="DELL">DELL</option>
+                <option value="ASUS">ASUS</option>
+                <option value="APPELE">APPELE (MacBook)</option>
+                <option value="MSI">MSI</option>
+                <option value="SAMSUNG">SAMSUNG</option>
+                <option value="LG">LG</option>
+                <option value="MICRSOFT (Surface)">MICRSOFT (Surface)</option>
+            </select>
+        </p>
+        <button type="button" onclick="rechercher()" id="rech">Rechercher</button>
+    </form>
+
+    <h2>Résultats de la recherche</h2>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Type</th>
+                <th>Numéro-d'inventaire</th>
+                <th>Date d'achat</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+
+    <script>
+        function rechercher() {
+            var searchNum = document.getElementById("searchNum").value;
+            var searchMarque = document.getElementById("searchMarque").value;
+
+            var table = parent.window.opener.document.getElementById("tableau");
+            var rows = table.getElementsByTagName("tr");
+            var resultBody = document.getElementById("resultBody");
+            resultBody.innerHTML = "";
+
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var marque = cells[0].innerHTML;
+                var numeroInventaire = cells[2].innerHTML;
+
+                if ((searchNum === "" || numeroInventaire === searchNum) && (searchMarque === marque || marque === searchMarque)) {
+                    var type = cells[1].innerHTML;
+                    var dateAchat = cells[3].innerHTML;
+
+                    var newRow = resultBody.insertRow();
+                    var cell1 = newRow.insertCell();
+                    var cell2 = newRow.insertCell();
+                    var cell3 = newRow.insertCell();
+                    var cell4 = newRow.insertCell();
+
+                    cell1.innerHTML = marque;
+                    cell2.innerHTML = type;
+                    cell3.innerHTML = numeroInventaire;
+                    cell4.innerHTML = dateAchat;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

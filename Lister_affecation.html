@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du parc informatique</title>
+    <style>
+         body{
+            background-image: url(tab.jpg);
+            background-size: cover;
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #0c67e5;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar label {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        #searchValue {
+            padding: 8px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        #rech {
+            padding: 10px 20px;
+            background-color: #091dd3;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .table-container {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .generate-button-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #btnGenerateExcel {
+            padding: 12px 24px;
+            background-color: #0c67e5;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        #btnGenerateExcel:hover,
+        #rech:hover {
+            background-color: #084fa0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestion du parc informatique</h1>
+    </header>
+
+    <div class="search-bar">
+        <label for="selectSearch">Rechercher par:</label>
+        <select id="selectSearch" name="searchType" required>
+            <option value="Matricule">Matricule</option>
+            <option value="Inventaire">Inventaire</option>
+            <option value="Data_aff">Date affectation</option>
+        </select>
+        <input type="text" id="searchValue" placeholder="Entrez la valeur de recherche">
+        <button id="rech">Rechercher</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Matricule</th>
+                    <th>Inventaire</th>
+                    <th>Date Affectation</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table rows will be added dynamically here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="generate-button-container">
+        <button id="btnGenerateExcel">Générer le fichier Excel</button>
+    </div>
+
+    <script>
+        // JavaScript code goes here
+        document.getElementById("btnGenerateExcel").addEventListener("click", function() {
+            // Rest of the code (as shown in the original HTML file)
+        });
+
+        // Rest of the JavaScript functions (as shown in the original HTML file)
+    </script>
+</body>
+</html>
